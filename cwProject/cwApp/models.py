@@ -2,7 +2,7 @@ from django.db import models
 from datetime import date
 
 
-# Create your models here.
+# car model
 class NewCarModel(models.Model):
     make = models.CharField(max_length=50, default='')
     modelYear = models.IntegerField(default=2019)

@@ -9,7 +9,7 @@
 
 <h3>Existing Cars</h3>
 <hr>
-
+<!--list all entries-->
 <ul>
 {% for eachCar in allCars %}
 <li>{{eachCar.make}}</li>
@@ -18,6 +18,7 @@
 
 <h3>Add a Car to the Database</h3>
 <hr>
+<!--load form-->
 <form action="{% url 'index' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}

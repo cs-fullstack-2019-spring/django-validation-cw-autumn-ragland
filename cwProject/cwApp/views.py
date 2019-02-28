@@ -4,7 +4,7 @@ from .forms import NewCarForm
 from .models import NewCarModel
 
 
-# Create your views here.
+# render form, check if form is valid, throw up errors or render submission page
 def index(request):
     if request.method == 'POST':
         form = NewCarForm(request.POST)
@@ -28,6 +28,6 @@ def index(request):
     }
     return render(request, 'cwApp/index.html', context)
 
-
+# function called if form is valid
 def submission(request):
     return render(request, 'cwApp/submit.html')

@@ -2,11 +2,12 @@ from django import forms
 from .models import NewCarModel
 
 
+# car form linked to model
 class NewCarForm(forms.ModelForm):
     class Meta:
         model = NewCarModel
         fields = '__all__'
-
+    # validation
     def clean_mpg(self):
         mpgData = self.cleaned_data['mpg']
         if mpgData < 20:
